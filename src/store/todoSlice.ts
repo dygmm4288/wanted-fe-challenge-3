@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { RootState } from ".";
 
-type Todo = {
+export type Todo = {
   id: number;
   content: string;
   isDone: boolean;

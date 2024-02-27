@@ -1,12 +1,12 @@
 import TodoForm from "../Form/TodoForm";
 import TodoList from "../List/TodoList";
-import { Main } from "./layout.styles";
+import { StMain } from "./layout.styles";
 
 export default function TodoMain() {
   return (
-    <Main>
+    <StMain>
       <TodoForm />
       <TodoList />
-    </Main>
+    </StMain>
   );
 }

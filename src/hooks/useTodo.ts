@@ -1,9 +1,9 @@
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import {
   addTodo as addTodoSlice,
-  deleteTodo as deleteTodoSlice,
+  deleteTodo,
   selectTodo,
-  toggleTodo as toggleTodoSlice,
+  toggleTodo,
 } from "../store/todoSlice";
 
 export default function useTodo() {
@@ -20,23 +20,15 @@ export default function useTodo() {
     dispatch(addTodoSlice(newTodo));
   };
 
-  const toggleTodo = (id: number) => {
-    dispatch(toggleTodoSlice(id));
-  };
-
-  const deleteTodo = (id: number) => {
-    dispatch(deleteTodoSlice(id));
-  };
-
   const handleDeleteTodo = (id: number) => {
     return () => {
-      deleteTodo(id);
+      dispatch(deleteTodo(id));
     };
   };
 
   const handleToggleTodo = (id: number) => {
     return () => {
-      toggleTodo(id);
+      dispatch(toggleTodo(id));
     };
   };
 

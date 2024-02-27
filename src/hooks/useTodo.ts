@@ -28,10 +28,22 @@ export default function useTodo() {
     dispatch(deleteTodoSlice(id));
   };
 
+  const handleDeleteTodo = (id: number) => {
+    return () => {
+      deleteTodo(id);
+    };
+  };
+
+  const handleToggleTodo = (id: number) => {
+    return () => {
+      toggleTodo(id);
+    };
+  };
+
   return {
     todos,
     addTodo,
-    toggleTodo,
-    deleteTodo,
+    handleDeleteTodo,
+    handleToggleTodo,
   };
 }

@@ -7,23 +7,15 @@ interface Props {
 }
 export default function TodoItem({ todo }: Props) {
   const { id, content, isDone } = todo;
-  const { deleteTodo, toggleTodo } = useTodo();
-
-  const handleDelete = () => {
-    deleteTodo(id);
-  };
-
-  const handleToggle = () => {
-    toggleTodo(id);
-  };
+  const { handleDeleteTodo, handleToggleTodo } = useTodo();
 
   return (
     <>
       <p>{content}</p>
-      <Button onClick={handleDelete} type='button'>
+      <Button onClick={handleDeleteTodo(id)} type='button'>
         Delete
       </Button>
-      <Button onClick={handleToggle} type='button'>
+      <Button onClick={handleToggleTodo(id)} type='button'>
         {isDone ? "Working" : "Done"}
       </Button>
     </>

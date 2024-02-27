@@ -1,11 +1,11 @@
-import TodoForm from "./components/Form/TodoForm";
-import TodoList from "./components/List/TodoList";
+import TodoHeader from "./components/Layout/TodoHeader";
+import TodoMain from "./components/Layout/TodoMain";
 
 export default function App() {
   return (
-    <div>
-      <TodoForm />
-      <TodoList />
-    </div>
+    <>
+      <TodoHeader />
+      <TodoMain />
+    </>
   );
 }

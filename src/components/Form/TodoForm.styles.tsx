@@ -25,7 +25,7 @@ export const StLabel = styled.label<{ $isFocus: boolean }>`
   top: 50%;
   left: 0.75rem;
 
-  transform: translateY(-50%);
+  transform: translateY(calc(-50% - 0.25rem));
   transition: all 0.2s ease-in;
 
   background-color: white;

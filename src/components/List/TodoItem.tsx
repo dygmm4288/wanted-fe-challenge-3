@@ -21,7 +21,10 @@ export default function TodoItem({ todo }: Props) {
       )}
       <StP $isDone={isDone}>{content}</StP>
       <div>
-        <Button onClick={handleDeleteTodo(id)} type='button'>
+        <Button
+          onClick={handleDeleteTodo(id)}
+          type='button'
+          buttonType={"danger"}>
           Delete
         </Button>
         <Button onClick={handleToggleTodo(id)} type='button'>

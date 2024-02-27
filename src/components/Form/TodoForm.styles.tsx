@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StForm = styled.form`
   display: flex;
   flex-direction: row;
+  gap: 0.5rem;
 `;
 
 export const StInput = styled.input<{ $isFocus: boolean }>`

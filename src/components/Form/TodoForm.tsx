@@ -25,7 +25,9 @@ export default function TodoForm() {
           required
         />
       </StInputWrapper>
-      <Button type='submit'>Add</Button>
+      <Button type='submit' buttonType='cta'>
+        Add
+      </Button>
     </StForm>
   );
 }

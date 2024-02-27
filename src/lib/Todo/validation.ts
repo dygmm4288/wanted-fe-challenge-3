@@ -1,3 +1,3 @@
 export const validateInput = (value: string) => {
-  return !!value.trim();
+  return !!value.trim() && value.length <= 25;
 };

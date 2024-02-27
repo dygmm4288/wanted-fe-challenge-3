@@ -19,6 +19,8 @@ export default function TodoForm() {
     }
 
     addTodo(content);
+
+    setContent("");
   };
 
   return (

@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 
 interface Props {
-  type: HTMLButtonElement["type"];
+  type?: HTMLButtonElement["type"];
   onClick?: () => void;
 }
 
@@ -11,7 +11,7 @@ export default function Button({
   onClick,
 }: PropsWithChildren<Props>) {
   return (
-    <button type={type} onClick={onClick}>
+    <button type={type || "button"} onClick={onClick}>
       {children}
     </button>
   );

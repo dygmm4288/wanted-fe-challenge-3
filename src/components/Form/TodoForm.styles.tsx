@@ -8,16 +8,18 @@ export const StForm = styled.form`
 export const StInput = styled.input<{ $isFocus: boolean }>`
   width: 100%;
   padding: 0.75rem;
+  border-radius: 0.5rem;
 
   &::placeholder {
     visibility: hidden;
   }
 
-  ${(props) => !props.$isFocus && "color: transparent"}
+  ${(props) => !props.$isFocus && "color: transparent;"}
 `;
 
 export const StLabel = styled.label<{ $isFocus: boolean }>`
   position: absolute;
+  padding: 0.25rem;
 
   top: 50%;
   left: 0.75rem;
@@ -30,7 +32,7 @@ export const StLabel = styled.label<{ $isFocus: boolean }>`
   ${(props) =>
     props.$isFocus &&
     `
-    top: 0%;
+    top: 0rem;
     left: 0.5rem;
     font-size: 0.8rem;
   `}

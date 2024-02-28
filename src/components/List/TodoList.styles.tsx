@@ -25,3 +25,8 @@ export const StP = styled.p<{ $isDone: boolean }>`
 
   font-size: 1.25rem;
 `;
+
+export const StButtonContainer = styled.div`
+  display: flex;
+  gap: 0.5rem;
+`;

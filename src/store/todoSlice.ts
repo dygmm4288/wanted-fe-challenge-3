@@ -17,7 +17,7 @@ const todoSlice = createSlice({
   reducers: {
     addTodo: (state, action: PayloadAction<Todo>) => {
       const todo = action.payload;
-      state.todos.push(todo);
+      state.todos.splice(0, 0, todo);
     },
     deleteTodo: (state, action: PayloadAction<number>) => {
       const id = action.payload;

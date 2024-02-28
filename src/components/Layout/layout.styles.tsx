@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StWrapper = styled.div`
-  width: 100vw;
   padding: 1rem;
 
   display: flex;

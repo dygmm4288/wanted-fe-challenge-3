@@ -14,11 +14,13 @@ export default function TodoItem({ todo }: Props) {
 
   return (
     <>
-      {isDone ? (
-        <MdCheckBox fontSize={25} />
-      ) : (
-        <MdCheckBoxOutlineBlank fontSize={25} />
-      )}
+      <div onClick={handleToggleTodo(id)}>
+        {isDone ? (
+          <MdCheckBox fontSize={25} cursor={"pointer"} />
+        ) : (
+          <MdCheckBoxOutlineBlank fontSize={25} cursor={"pointer"} />
+        )}
+      </div>
       <StP $isDone={isDone}>{content}</StP>
       <StButtonContainer>
         <Button

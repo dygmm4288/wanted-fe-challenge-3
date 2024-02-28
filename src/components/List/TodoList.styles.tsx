@@ -7,7 +7,7 @@ export const StUl = styled.ul`
   padding-top: 1rem;
   padding-bottom: 1rem;
   height: 100vh;
-  overflow: scroll;
+  overflow: auto;
 `;
 
 export const StLi = styled.li`

@@ -48,13 +48,19 @@ const StCtaButtonCss = css<{ $buttonType: ButtonType }>`
 `;
 
 const StButton = styled.button<{ $buttonType: ButtonType }>`
-  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+  width: 6rem;
+  max-width: 6rem;
 
   color: white;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1rem;
   text-align: center;
   transition: background-color 0.3s, transform 0.2s;
 
